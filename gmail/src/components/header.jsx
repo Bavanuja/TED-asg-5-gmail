@@ -1,9 +1,10 @@
 import React from 'react'
 import { AppBar, Toolbar, IconButton, InputBase, Box, Avatar } from '@mui/material';
-import { Menu, Search, Tune } from '@mui/icons-material';
+import { Menu, Search, Tune, ViewSidebar } from '@mui/icons-material';
 import AppsIcon from '@mui/icons-material/Apps';
 import HelpIcon from '@mui/icons-material/Help';
 import SettingsIcon from '@mui/icons-material/Settings';
+
 
 export default function Header() {
   return (
@@ -24,13 +25,30 @@ export default function Header() {
           <Tune />
         </IconButton>
       </Box>
-      <IconButton sx={{ ml: 2 }}>
+      <IconButton >
       <HelpIcon />
-      <SettingsIcon />
-      <AppsIcon />
-      <Avatar src="gimage.jpg" sx={{marginLeft:2 }} />
       </IconButton>
+      <IconButton >
+      <SettingsIcon/>
+      </IconButton>
+      <img
+        src="Gemini.png.webp"
+        alt="Gmail Logo"
+        style={{ 
+          height: '30px',
+          '&:hover': {
+  backgroundColor: '#f1f3f4',
+} 
+        }}
+      />
+      <IconButton >
+      <AppsIcon />
+      </IconButton>
+      <Avatar src="gimage.jpg"  />
+     
     </Toolbar>
   </AppBar>
+  
+
   )
 }

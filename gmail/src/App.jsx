@@ -3,7 +3,8 @@ import Header from './components/header'
 import Sidebar from './components/sidebar'
 import Tab from './components/tab'
 import MailList from './components/mailList'
-import { CssBaseline, Grid, Box, Toolbar } from '@mui/material';
+import { CssBaseline, Box, Toolbar } from '@mui/material';
+import Grid from '@mui/material/Grid2';
 
 export default function App() {
   return (
@@ -13,13 +14,10 @@ export default function App() {
     <Box sx={{ display: 'flex', mt: 8 }}>
       <Toolbar />
       <Grid container sx={{ height: '100vh' }}>
-        {/* Left Sidebar with small width */}
         <Grid item xs={2} sx={{ backgroundColor: '#f5f5f5' }}>
           <Sidebar />
         </Grid>
-
-        {/* Mail List taking up the rest */}
-        <Grid item xs={10} sx={{ padding: 2, backgroundColor: '#ffffff' }}>
+        <Grid item xs={10} sx={{ padding: 3, backgroundColor: '#ffffff' }}>
           <Tab />
           <MailList />
         </Grid>
