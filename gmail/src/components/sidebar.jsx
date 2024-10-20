@@ -19,6 +19,8 @@ import ReportGmailerrorredIcon from '@mui/icons-material/ReportGmailerrorred';
 import DeleteIcon from '@mui/icons-material/Delete';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AddIcon from '@mui/icons-material/Add';
+import { Button } from '@mui/material';
+import CreateIcon from '@mui/icons-material/Create';
 
 export default function NestedList() {
   const [open, setOpen] = React.useState(true);
@@ -28,6 +30,27 @@ export default function NestedList() {
   };
 
   return (
+    <div>
+    <Button
+      variant="contained"
+      startIcon={<CreateIcon />} 
+      sx={{
+        backgroundColor: 'lightblue', 
+        color: '#000',
+        borderRadius: '24px',
+        padding: '10px 20px',
+        textTransform: 'none',
+        fontSize: '16px',
+        boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.2)',
+        '&:hover': {
+          backgroundColor: '#1769aa',
+        },
+        marginTop:'20px',
+        marginLeft:'20px'
+      }}
+    >
+      Compose
+    </Button>
     <List
       sx={{ width: '100%', maxWidth: 360 }}
       component="nav">
@@ -133,5 +156,6 @@ export default function NestedList() {
         </List>
       </Collapse>
     </List>
+  </div>
   );
 }

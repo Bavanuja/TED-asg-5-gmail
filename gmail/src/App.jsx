@@ -1,10 +1,11 @@
 import React from 'react'
 import Header from './components/header'
 import Sidebar from './components/sidebar'
-import Tab from './components/tab'
-import MailList from './components/mailList'
+
 import { CssBaseline, Box, Toolbar } from '@mui/material';
 import Grid from '@mui/material/Grid2';
+import MailList from './components/mailList';
+import Gmail from './components/gmail';
 
 export default function App() {
   return (
@@ -18,9 +19,8 @@ export default function App() {
           <Sidebar />
         </Grid>
         <Grid item xs={10} sx={{ padding: 3, backgroundColor: '#ffffff' }}>
-          <Tab />
-          <MailList />
-        </Grid>
+          <Gmail />
+          </Grid>
       </Grid>
     </Box>
   </>
