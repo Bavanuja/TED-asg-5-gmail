@@ -1,22 +1,12 @@
-import React from 'react';
-import { List, Box } from '@mui/material';
-import UnreadMessage from './unreadMessage';
-import ReadMessage from './readMessage';
+import React from 'react'
+import ReadMessage from './readMessage'
+import UnreadMessage from './unreadMessage'
 
-const MailList = ({ messages }) => {
+export default function MailList() {
   return (
-    <Box sx={{ padding: '16px',  height: '100%' }}>
-      <List sx={{ width: '100%', padding: 0 }}>
-        {messages.map((msg) =>
-          msg.read ? (
-            <ReadMessage key={msg.id} {...msg} />
-          ) : (
-            <UnreadMessage key={msg.id} {...msg} />
-          )
-        )}
-      </List>
-    </Box>
-  );
-};
-
-export default MailList;
+    <div>
+        <ReadMessage sender={"Arushan"} time={"4.14"} caption={"hiii"}/>
+        <UnreadMessage sender={"Arushan"} time={"4.14"} caption={"hiii"}/>
+    </div>
+  )
+}

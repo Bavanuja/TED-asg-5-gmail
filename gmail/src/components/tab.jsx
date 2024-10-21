@@ -10,16 +10,15 @@ const GmailTabs = () => {
   const handleTabChange = (event, newValue) => {
     setActiveTab(newValue);
   };
-  
 
   return (
-    <Box 
-      sx={{ 
-        width: '100%', 
-        bgcolor: 'background.paper', 
-        borderBottom: 1, 
+    <Box
+      sx={{
+        width: '100%',
+        bgcolor: 'background.paper',
+        borderBottom: 1,
         borderColor: 'divider',
-        }}
+      }}
     >
       <Tabs
         value={activeTab}
@@ -27,35 +26,33 @@ const GmailTabs = () => {
         indicatorColor="primary"
         textColor="primary"
         variant="fullWidth"
-        
       >
-        <Tab 
+        <Tab
           icon={
             <Badge badgeContent={2} color="error">
               <InboxIcon />
             </Badge>
-          } 
-          label="Primary" 
-          
+          }
+          label="Primary"
+          sx={{ width: '200px', height: '60px', minWidth: '100px', padding: '10px' }}
         />
-        <Tab 
+        <Tab
           icon={
             <Badge badgeContent={3} color="error">
               <PeopleIcon />
             </Badge>
-          } 
-          label="Social" 
-          
-          
+          }
+          label="Social"
+          sx={{ width: '120px', height: '60px', minWidth: '100px', padding: '10px' }}
         />
-        <Tab 
+        <Tab
           icon={
             <Badge badgeContent={1} color="error">
               <LocalOfferIcon />
             </Badge>
-          } 
-          label="Promotions" 
-          
+          }
+          label="Promotions"
+          sx={{ width: '120px', height: '60px', minWidth: '100px', padding: '10px' }}
         />
       </Tabs>
     </Box>
