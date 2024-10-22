@@ -6,6 +6,7 @@ import { CssBaseline, Box, Toolbar, Tab } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 import GmailTabs from './components/tab';
 import MailList from './components/mailList';
+import RightBar from './components/rightBar';
 
 export default function App() {
   return (
@@ -18,11 +19,15 @@ export default function App() {
         <Grid item xs={2} sx={{ backgroundColor: '#f5f5f5' }}>
           <Sidebar />
         </Grid>
-        <Grid item xs={10} sx={{ padding: 3, backgroundColor: '#ffffff' }}>
+        <Grid item xs={8} sx={{ padding: 3, backgroundColor: '#ffffff' }}>
         <GmailTabs/>
         <MailList/>
-          </Grid>
+        </Grid>
+        
       </Grid>
+      <Grid item xs={2} sx={{ backgroundColor: '#f5f5f5',marginLeft:'48px' }}>
+          <RightBar />
+        </Grid>
     </Box>
   </>
   )
