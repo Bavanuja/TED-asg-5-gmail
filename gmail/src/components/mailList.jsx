@@ -128,7 +128,7 @@ const messages = [
 const styles = {
   container: {
     height: '500px',
-    width:'1000px',
+    width:'950px',
     overflowY: 'scroll', 
     border: '1px solid #ddd',
     padding: '10px',

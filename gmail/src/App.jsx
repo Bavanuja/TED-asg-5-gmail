@@ -25,7 +25,7 @@ export default function App() {
         </Grid>
         
       </Grid>
-      <Grid item xs={2} sx={{ backgroundColor: '#f5f5f5',marginLeft:'48px' }}>
+      <Grid item xs={2} sx={{ backgroundColor: '#f5f5f5'}}>
           <RightBar />
         </Grid>
     </Box>
